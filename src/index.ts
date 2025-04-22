@@ -25,6 +25,10 @@ import {
     // Texture, // Import THREE.js internals
 } from "webgi";
 import "./styles.css";
+// vite.config.ts
+import { defineConfig } from 'vite'
+
+
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -70,7 +74,7 @@ async function setupViewer(){
     await viewer.addPlugin(CanvasSnipperPlugin)
 
     // Import and add a GLB file.
-    await viewer.load("./assets/SU7.glb")
+    await viewer.load("/assets/SU7.glb")
 
     // Load an environment map if not set in the glb file
     // await viewer.setEnvironmentMap("./assets/environment.hdr");

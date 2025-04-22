@@ -3,6 +3,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
 
 export default defineConfig({
+    base: '/SU7-webgi/',
     plugins: [
         viteStaticCopy({
             targets: [
