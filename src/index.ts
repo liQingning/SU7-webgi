@@ -80,9 +80,9 @@ async function setupViewer(){
     // await viewer.setEnvironmentMap("./assets/environment.hdr");
 
     // Add some UI for tweak and testing.
-    const uiPlugin = await viewer.addPlugin(TweakpaneUiPlugin)
+    //const uiPlugin = await viewer.addPlugin(TweakpaneUiPlugin)
     // Add plugins to the UI to see their settings.
-    uiPlugin.setupPlugins<IViewerPlugin>(TonemapPlugin, CanvasSnipperPlugin)
+    //uiPlugin.setupPlugins<IViewerPlugin>(TonemapPlugin, CanvasSnipperPlugin)
     
     viewer.renderer.refreshPipeline
 
