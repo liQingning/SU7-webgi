@@ -4,13 +4,97 @@
 <head>
 	<title>WebGi starter</title>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/misans@4.1.0/lib/Normal/MiSans-Medium.min.css" /> <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/misans@4.1.0/lib/Normal/MiSans-Bold.min.css" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 </head>
 
-<body>
+<body>	
 	<div id="webgi-canvas-container">
 		<canvas id="webgi-canvas"></canvas>
 	</div>
+	<nav class="nac--bar">
+		<img src="/assets/IMG_20250421_194451.png" alt="" class="logo">
+		<a href="https://www.xiaomiev.com/configurator/select-version?itemId=500001000" target="_blank">
+			<button class="button--navbar">购 买</button>
+		</a>
+		
+	</nav>
+
+	<section class="section first">
+		<div class="section-continer1">
+			<h1>Design</h1>
+			<p>优雅设计<br>经得起时间考验</p>
+		</div>
+	</section>
+
+	<section class="section second">
+		<p>遵循「符合直觉」的美学设计理念，造就 Xiaomi SU7 经典的流畅车身线条。
+			<br>富有力量的车身线条与自然舒展的车身比例，让优雅与速度感相得益彰。</p>
+		<h1>优雅外观<br>经典之作</h1>
+		<div class="custom--bg"></div>
+	</section>
+
+	<section class="section third">
+		<div class="section-continer3">
+			<h1>亮眼细节<br>点睛之笔</h1>
+			<p>细节设计与整体外观相得益彰。<br>水滴形大灯、全车低风阻设计，配合八款轮毂设计，与整车的优雅外观浑然一体。</p>
+		</div>
+	</section>
+
+	<section class="section fourth">
+		<div class="section-continer4">
+			<h1>Comfort</h1>
+			<p>舒适座舱<br>处处体贴，恰如其分</p>
+		</div>
+	</section>
+
+	<section class="section fifth">
+		<div class="section-continer5">
+			<h1>黄金驾驶位设计</h1>
+			<p>为驾驶者打造的驾驶位设计，无论是人体工学、操作便利性，还是驾驶安全性，从功能到<br>设计均服务于驾驶者，提升驾驶专注度和安全性。</p>
+		</div>
+	</section>
+
+	<section class="section sixth">
+		<div class="section-continer6">
+			<h1>人性化座舱收纳</h1>
+			<p>支持无线快充的手机放置位</p>
+			
+		</div>
+	</section>
+
+	<section class="section seventh">
+		<div class="section-continer7">
+			<h1>全车丰富储物空间<br>处处都是收纳巧思</h1>
+			<p>独具巧思的百变中控台，大容积中空设计，方便轻松放置随身大物件；<br>内设百变基座、储物格、隐藏挂钩、置物台、眼镜盒、应急手电收纳，扩展更多的功能和体验。</p>
+		</div>
+	</section>
+
+	<section class="section eighth">
+		<div class="section-continer8">
+			<a href="https://www.xiaomiev.com/su7" target="_blank">
+				<h1>了解<br>详情</h1>
+			</a>
+			<p></p>
+		</div>
+	</section>
+
+
+		<button id="backToTop">↑ 回到顶部</button>
+
+
+	<script>
+		const backToTopBtn = document.getElementById("backToTop");
+	
+		backToTopBtn.addEventListener("click", () => {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth" // 平滑滚动
+			});
+		});
+	</script>
+	
+
 
 	<script src="src/index.ts" type="module"></script>
 </body>
