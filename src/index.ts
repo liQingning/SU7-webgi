@@ -25,6 +25,7 @@ import {
     // Texture, // Import THREE.js internals
 } from "webgi";
 import "./styles.css";
+
 // vite.config.ts
 import { defineConfig } from 'vite'
 
@@ -38,13 +39,15 @@ async function setupViewer(){
 
     // Initialize the viewer
     const viewer = new ViewerApp({
+        
         canvas: document.getElementById('webgi-canvas') as HTMLCanvasElement,
         useRgbm: false,
     })
     const camera=viewer.scene.activeCamera
     const position=camera.position
     const target=camera.target
-
+    const manager = new AssetManagerPlugin();
+    await viewer.addPlugin(manager);
     // Add plugins individually.
     await viewer.addPlugin(GBufferPlugin)
     // await viewer.addPlugin(new ProgressivePlugin(32))
@@ -74,7 +77,8 @@ async function setupViewer(){
     await viewer.addPlugin(CanvasSnipperPlugin)
 
     // Import and add a GLB file.
-    await viewer.load("/assets/SU7.glb")
+
+    await viewer.load("/SU7-webgi/assets/SU7.glb")
 
     // Load an environment map if not set in the glb file
     // await viewer.setEnvironmentMap("./assets/environment.hdr");
