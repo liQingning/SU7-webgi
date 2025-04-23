@@ -46,17 +46,17 @@ async function setupViewer(){
     const target=camera.target
 
     // Add plugins individually.
-    // await viewer.addPlugin(GBufferPlugin)
+    await viewer.addPlugin(GBufferPlugin)
     // await viewer.addPlugin(new ProgressivePlugin(32))
     // await viewer.addPlugin(new TonemapPlugin(!viewer.useRgbm))
     // await viewer.addPlugin(GammaCorrectionPlugin)
-    // await viewer.addPlugin(SSRPlugin)
-    // await viewer.addPlugin(SSAOPlugin)
+    await viewer.addPlugin(SSRPlugin)
+    await viewer.addPlugin(SSAOPlugin)
     // await viewer.addPlugin(DiamondPlugin)
     // await viewer.addPlugin(FrameFadePlugin)
     // await viewer.addPlugin(GLTFAnimationPlugin)
     // await viewer.addPlugin(GroundPlugin)
-    // await viewer.addPlugin(BloomPlugin)
+    await viewer.addPlugin(BloomPlugin)
     // await viewer.addPlugin(TemporalAAPlugin)
     // await viewer.addPlugin(AnisotropyPlugin)
     // and many more...
@@ -84,8 +84,7 @@ async function setupViewer(){
     // Add plugins to the UI to see their settings.
     //uiPlugin.setupPlugins<IViewerPlugin>(TonemapPlugin, CanvasSnipperPlugin)
     
-    viewer.renderer.refreshPipeline
-
+    viewer.renderer.refreshPipeline;
    
     function setupScrollanimation() {
         // 第一段 -> 第二段
@@ -93,7 +92,7 @@ async function setupViewer(){
             trigger: ".second",
             start: "top bottom",
             end: "top top",
-            scrub: true,
+            scrub: 1.5,
             onUpdate: self => {
                 const p = self.progress
                 position.set(
@@ -112,6 +111,11 @@ async function setupViewer(){
                     textEl.style.opacity = `${lerp(1,0,p*3)}`
                     textEl.style.transform = `translateX(${p * 500}px)`     
                 }
+                const textE2 = document.querySelector('.section.second h1') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(0,1,p)}`
+                    //textE2.style.transform = `translateX(${p * 500}px)`     
+                }
                 onUpdate()
             }
         })
@@ -121,7 +125,7 @@ async function setupViewer(){
             trigger: ".third",
             start: "top bottom",
             end: "top top",
-            scrub: true,
+            scrub: 1.5,
             onUpdate: self => {
                 const p = self.progress
                 position.set(
@@ -139,6 +143,11 @@ async function setupViewer(){
                     textEl.style.opacity = `${lerp(1,0,p*3)}`
                     textEl.style.transform = `translateX(${p * 500}px)`     
                 }
+                const textE2 = document.querySelector('.section-continer3') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(0,1,p)}`
+                    //textE2.style.transform = `translateX(${p * 500}px)`     
+                }
                 onUpdate()
             }
         })
@@ -148,7 +157,7 @@ async function setupViewer(){
             trigger: ".fourth",
             start: "top bottom",
             end: "top top",
-            scrub: true,
+            scrub: 1.5,
             onUpdate: self => {
                 const p = self.progress
                 position.set(
@@ -166,6 +175,11 @@ async function setupViewer(){
                     textEl.style.opacity = `${lerp(1,0,p*3)}`
                     textEl.style.transform = `translateX(${-p * 500}px)`     
                 }
+                const textE2 = document.querySelector('.section-continer4') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(0,1,p)}`
+                    //textE2.style.transform = `translateX(${p * 500}px)`     
+                }
                 onUpdate()
             }
         })
@@ -175,7 +189,7 @@ async function setupViewer(){
             trigger: ".fifth",
             start: "top bottom",
             end: "top top",
-            scrub: true,
+            scrub: 1.5,
             onUpdate: self => {
                 const p = self.progress
                 position.set(
@@ -193,6 +207,11 @@ async function setupViewer(){
                     textEl.style.opacity = `${lerp(1,0,p*3)}`
                     // textEl.style.transform = `translateX(${-p * 500}px)`     
                 }
+                const textE2 = document.querySelector('.section-continer5') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(0,1,p)}`
+                    //textE2.style.transform = `translateX(${p * 500}px)`     
+                }
                 onUpdate()
             }
         })
@@ -201,7 +220,7 @@ async function setupViewer(){
             trigger: ".sixth",
             start: "top bottom",
             end: "top top",
-            scrub: true,
+            scrub: 1.5,
             onUpdate: self => {
                 const p = self.progress
                 position.set(
@@ -219,6 +238,11 @@ async function setupViewer(){
                     textEl.style.opacity = `${lerp(1,0,p*3)}`
                     textEl.style.transform = `translateX(${p * 500}px)`     
                 }
+                const textE2 = document.querySelector('.section-continer6') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(0,1,p)}`
+                    //textE2.style.transform = `translateX(${p * 500}px)`     
+                }
                 onUpdate()
             }
         })
@@ -228,7 +252,7 @@ async function setupViewer(){
             trigger: ".seventh",
             start: "top bottom",
             end: "top top",
-            scrub: true,
+            scrub: 1.5,
             onUpdate: self => {
                 const p = self.progress
                 position.set(
@@ -246,6 +270,11 @@ async function setupViewer(){
                     textEl.style.opacity = `${lerp(1,0,p*3)}`
                     textEl.style.transform = `translateX(${-p * 500}px)`     
                 }
+                const textE2 = document.querySelector('.section-continer7') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(0,1,p)}`
+                    //textE2.style.transform = `translateX(${p * 500}px)`     
+                }
                 onUpdate()
             }
         })
@@ -255,7 +284,7 @@ async function setupViewer(){
             trigger: ".eighth",
             start: "top bottom",
             end: "top top",
-            scrub: true,
+            scrub: 1.5,
       
             onUpdate: self => {
                 const p = self.progress
@@ -273,6 +302,11 @@ async function setupViewer(){
                 if (textEl) {
                     textEl.style.opacity = `${lerp(1,0,p*3)}`
                     textEl.style.transform = `translateX(${-p * 500}px)`     
+                }
+                const textE2 = document.querySelector('.section-continer8') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(0,1,p)}`
+                    //textE2.style.transform = `translateX(${p * 500}px)`     
                 }
                 onUpdate()
             }

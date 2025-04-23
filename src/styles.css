@@ -8,7 +8,9 @@ body {
   font-family: 'MiSans',sans-serif;
   overflow-x: hidden;
   font-family: 'MiSans', sans-serif;
+
 }
+
 .nav--bar{
   position: absolute;
   display: flex;
@@ -229,13 +231,15 @@ body {
 }
 /*第八部分*/
 .section.eighth{
+  max-height: 100vh;     /* 固定高度 */
+  overflow: hidden;
 
   color: #12151A;
 }
 
 .section-continer8{
   margin-top: 18%;
-  width: 100vw;
+  width: 10vw;
   margin-left: 70%;
 }
 .section-continer8 h1{
@@ -257,12 +261,26 @@ body {
   text-decoration-thickness: 3px;
   color: inherit; /* 继承 h1 的颜色 */
 }
+.section-continer8  a:hover {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 3px;
+  color: #9A9B9D; /* 继承 h1 的颜色 */
+}
 
-.end{
-  width: 100vw;
-  height: 10vh;
-  margin-left: -1%;
-  background: #000;
+.custom--bg2{
+  
+  width: 130%;
+  height: 700px;
+  background: #CECCCE;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  -o-transform: skew(21deg);
+  transform: skew(-22deg) rotate(-50deg);
+  position: absolute;
+  top: 0%;
+  left: -25%;
+  z-index: -2;
 }
 
 
