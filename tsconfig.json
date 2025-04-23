@@ -6,12 +6,13 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "allowJs": true,
-    "module": "es6",
     "target": "es6",
     "lib": ["es6", "dom"],
     "rootDir": "src",
     "outDir": "dist",
-    "moduleResolution": "node"
+    "module": "esnext", 
+    "moduleResolution": "node",
+    "types": ["vite/client"],
   },
   "exclude": ["dist", "node_modules"]
 }
