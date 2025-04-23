@@ -78,8 +78,8 @@ async function setupViewer(){
 
     // Import and add a GLB file.
 
-    await viewer.load("./assets/SU7.glb")
-    //await viewer.load(`${import.meta.env.BASE_URL}/assets/SU7.glb`);
+    // await viewer.load("./assets/SU7.glb")
+    await viewer.load(`${import.meta.env.BASE_URL}/assets/SU7.glb`);
 
     // Load an environment map if not set in the glb file
     // await viewer.setEnvironmentMap("./assets/environment.hdr");
