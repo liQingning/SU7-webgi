@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MiSans-Light';
-  src: url('/SU7-webgi/assets/fonts/MiSans-Light.ttf') format('truetype');
+  src: url('./assets/fonts/MiSans-Light.ttf') format('truetype');
   font-weight: 300; /* Light */
   font-style: normal;
 }
