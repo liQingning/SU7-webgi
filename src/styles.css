@@ -233,7 +233,7 @@ body {
 /*第八部分*/
 .section.eighth{
   max-height: 100vh;     /* 固定高度 */
-  overflow-y: hidden;
+  overflow: hidden;
 
   color: #12151A;
 }
